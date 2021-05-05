@@ -17,7 +17,7 @@ import box_maker
                    'instance for each category will be [1, 3, 2, 1, 3, 2, 1, 3]')
 @click.option('--type', '-t', default='PASCAL', show_default=True,
               type=click.Choice(['PASCAL'], case_sensitive=False))
-@click.option('--seed', default=0, show_default=True, type=int, help='Random seed.')
+@click.option('--seed', default=None, show_default=True, type=int, help='Random seed.')
 @click.option('--output-path', '-o', default='./', type=str, show_default=True)
 @click.option('--verbose', '-v', is_flag=True, help='Increase output verbosity')
 def entry(**kwargs):
@@ -27,6 +27,11 @@ def entry(**kwargs):
     )
     bm.hello()
     print('kwargs', kwargs, kwargs['height'])
+
+    names = box_maker.random_category_names(10, 10)
+    print('names', names)
+    names = box_maker.random_category_names(10, 10, with_index=False)
+    print('names', names)
 
 
 @click.command()
