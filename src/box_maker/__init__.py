@@ -1,2 +1,2 @@
 from .box_maker import BoxMaker
-from .box_maker import _random_category_names as random_category_names
+from .random_category_names import random_category_names
