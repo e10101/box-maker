@@ -8,11 +8,12 @@ def random_category_names(num, seed=None, with_index=True):
     if seed is not None:
         re_seed(seed)
 
+    num_of_leading_zero = len(str(num))
+
     def output(i):
         if with_index:
             return '{}-{}'.format(generate_slug(2), str(i+1).zfill(num_of_leading_zero))
         else:
             return '{}'.format(generate_slug(2))
 
-    num_of_leading_zero = len(str(num))
     return [output(i) for i in range(num)]
