@@ -14,5 +14,6 @@ setup(
   entry_points='''
     [console_scripts]
     box-maker=box_maker.scripts.cli:entry
+    box-maker-test=box_maker.scripts.cli:test
   ''',
 )
