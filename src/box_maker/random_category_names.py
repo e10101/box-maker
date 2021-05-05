@@ -13,7 +13,10 @@ def random_category_names(num, seed=None, with_index=True, words=2):
 
     def output(i):
         if with_index:
-            return '{}-{}'.format(generate_slug(words), str(i+1).zfill(num_of_leading_zero))
+            return '{}-{}'.format(
+                generate_slug(words),
+                str(i+1).zfill(num_of_leading_zero)
+            )
         else:
             return '{}'.format(generate_slug(words))
 
