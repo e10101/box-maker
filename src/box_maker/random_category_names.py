@@ -1,5 +1,6 @@
 import logging
-from coolname import generate_slug
+import coolname
+
 from .re_seed import re_seed
 
 
@@ -14,10 +15,10 @@ def random_category_names(num, seed=None, with_index=True, words=2):
     def output(i):
         if with_index:
             return '{}-{}'.format(
-                generate_slug(words),
+                coolname.generate_slug(words),
                 str(i+1).zfill(num_of_leading_zero)
             )
         else:
-            return '{}'.format(generate_slug(words))
+            return '{}'.format(coolname.generate_slug(words))
 
     return [output(i) for i in range(num)]
