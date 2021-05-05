@@ -30,7 +30,7 @@ def entry(**kwargs):
 
     names = box_maker.random_category_names(10, 10)
     print('names', names)
-    names = box_maker.random_category_names(10, 10, with_index=False)
+    names = box_maker.random_category_names(10, 10, with_index=False, words=2)
     print('names', names)
 
 
