@@ -2,8 +2,7 @@ import pascal_voc_writer
 import logging
 import sys
 
-from .random_category_names import random_category_names
-
+from box_maker.utils import random_category_names
 
 class BoxMaker:
     def __init__(self,
